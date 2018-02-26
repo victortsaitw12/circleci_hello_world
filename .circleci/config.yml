@@ -5,9 +5,6 @@ jobs:
             - image: circleci/node:latest-browsers
         steps:
             - checkout
-            - run: echo "hello world"
-        deployment:
-            hub:
-                commands:
-                    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-                    - docker push victortsaitw12/circleci_hello_world
+            - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+            - run: docker build -t victortsaitw12/circleci_hello_world .
+            - run: docker push victortsaitw12/circleci_hello_world
