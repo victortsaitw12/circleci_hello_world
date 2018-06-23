@@ -4,7 +4,7 @@
   "description": "",
   "main": "statics.js",
   "scripts": {
-    "test": "mocha test --reporter mocha-junit-reporter"
+    "test": "node_modules/.bin/mocha test --reporter mocha-junit-reporter"
   },
   "repository": {
     "type": "git",

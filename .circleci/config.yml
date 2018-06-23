@@ -6,8 +6,6 @@ jobs:
         steps:
             - checkout
             - run: sudo npm install -g
-            - run: sudo npm install -g mocha-junit-reporter
-            - run: sudo npm install -g mocha
             - run: mkdir ~/junit
             - run:
                 command: npm test
