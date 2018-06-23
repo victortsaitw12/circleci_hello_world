@@ -5,8 +5,7 @@ jobs:
             - image: circleci/node:latest-browsers
         steps:
             - checkout
-            - run: sudo npm install -g
-            - run: sudo npm install -g mocha
+            - run: sudo npm install --save-dev
             - run: mkdir ~/junit
             - run:
                 command: mocha test --reporter mocha-junit-reporter
