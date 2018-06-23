@@ -1,6 +1,7 @@
 version: 2
 jobs:
     build:
+        working_director: ~/tmp
         docker:
             - image: circleci/node:latest-browsers
         steps:
@@ -16,3 +17,4 @@ jobs:
                 path: ~/junit/test-results.xml
             - store_artifacts:
                 path: ~/
+
