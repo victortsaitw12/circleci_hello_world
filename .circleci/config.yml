@@ -12,7 +12,7 @@ jobs:
                   MOCHA_FILE: ./test_result/mocha/results.xml
                 when: always
             - store_test_results:
-                path: ./test_result/mocha/results.xml
+                path: ./test_result
             - store_artifacts:
                 path: ./test_result/mocha/results.xml
 
