@@ -1,20 +1,18 @@
 version: 2
 jobs:
     build:
-        working_director: ~/tmp
         docker:
             - image: circleci/node:latest-browsers
         steps:
             - checkout
             - run: sudo npm install -g
-            - run: mkdir junit
             - run:
                 command: npm test
                 environment:
-                  MOCHA_FILE: ~/junit/test-results.xml
+                  MOCHA_FILE: /junit/test-results.xml
                 when: always
             - store_test_results:
-                path: ~/junit/test-results.xml
+                path: /junit/test-results.xml
             - store_artifacts:
                 path: ~/
 
