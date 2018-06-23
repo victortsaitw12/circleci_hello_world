@@ -9,10 +9,10 @@ jobs:
             - run:
                 command: npm test
                 environment:
-                  MOCHA_FILE: /junit/test-results.xml
+                  MOCHA_FILE: ./junit/test-results.xml
                 when: always
             - store_test_results:
-                path: /junit/test-results.xml
+                path: ./junit/test-results.xml
             - store_artifacts:
                 path: ~/
 
