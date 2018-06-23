@@ -1,8 +1,8 @@
 const expect = require('chai').expect;
 const sinon = require('sinon');
-const fn_avg = require('./statics').fn_avg;
-const fn_avg_from_db = require('./statics').fn_avg_from_db;
-const fn_avg_from_db_promise = require('./statics').fn_avg_from_db_promise;
+const fn_avg = require('../statics').fn_avg;
+const fn_avg_from_db = require('../statics').fn_avg_from_db;
+const fn_avg_from_db_promise = require('../statics').fn_avg_from_db_promise;
 describe('positive test', () => {
   it('test result should be 6', () => {
     expect(fn_avg([0, 1, 2, 3, 4, 5])).to.equal(6);
