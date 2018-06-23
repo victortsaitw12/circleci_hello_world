@@ -6,7 +6,7 @@ jobs:
         steps:
             - checkout
             - run: sudo npm install -g
-            - run: mkdir ~/junit
+            - run: mkdir junit
             - run:
                 command: npm test
                 environment:
@@ -15,4 +15,4 @@ jobs:
             - store_test_results:
                 path: ~/junit/test-results.xml
             - store_artifacts:
-                path: ~/
+                path: ~/junit
