@@ -1,0 +1,23 @@
+{
+  "name": "circleci_hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "statics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victortsaitw12/circleci_hello_world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victortsaitw12/circleci_hello_world/issues"
+  },
+  "homepage": "https://github.com/victortsaitw12/circleci_hello_world#readme",
+  "dependencies": {
+    "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0"
+  }
+}
