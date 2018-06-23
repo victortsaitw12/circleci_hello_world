@@ -5,14 +5,13 @@ jobs:
             - image: circleci/node:latest-browsers
         steps:
             - checkout
-            - run: sudo npm install --save-dev
+            - run: sudo npm install -g
+            - run: sudo npm install -g mocha
             - run: mkdir ~/junit
             - run:
                 command: mocha test --reporter mocha-junit-reporter
-                environment:
-                  MOCHA_FILE: junit/test-results.xml
                 when: always
             - store_test_results:
-                path: ~/junit
+                path: ~/
             - store_artifacts:
-                path: ~/junit
+                path: ~/
